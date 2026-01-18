@@ -1,0 +1,12 @@
+{
+  "name": "whatsapp-bot-base",
+  "version": "1.0.0",
+  "description": "Whatsapp Bot Base with Baileys by dukearham",
+  "license": "MIT",
+  "author": "dukearham",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
