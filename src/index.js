@@ -1,11 +1,18 @@
 import { makeWASocket, useMultiFileAuthState } from "@whiskeysockets/baileys";
-import connectionHandler from "./handlers/connectionHandler.js";
+import config from "./config/index.js";
+import pino from "pino";
+//import initHandlers from "./handlers/index.js";
 
-(async function main() {
-  const { state, saveCreds } = await useMultiFileAuthState("../sessions/one");
+async function startSock() {
+  const { state, saveCreds } = await useMultiFileAuthState(
+    `./session/${config.sessionName}`
+  );
   const sock = makeWASocket({
-    auth: state
+    auth: state,
+    logger: pino({ level: "silent" })
   });
-  connectionHandler(sock);
 
-})();
+  //initHandlers(sock);
+}
+
+startSock();
