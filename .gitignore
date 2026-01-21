@@ -6,3 +6,6 @@ node_modules/
 
 # WA sessions
 sessions/*
+
+# Logs file
+logs/*

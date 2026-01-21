@@ -1,5 +1,5 @@
 import { makeWASocket, useMultiFileAuthState } from "@whiskeysockets/baileys";
-import config from "./config/index.js";
+import config from "./config.js";
 import pino from "pino";
 import initHandlers from "./handlers/index.js";
 
@@ -11,7 +11,6 @@ async function startSock() {
     auth: state,
     logger: pino({ level: "silent" })
   });
-
   initHandlers(sock);
 }
 
