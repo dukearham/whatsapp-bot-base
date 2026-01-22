@@ -10,7 +10,6 @@ module.exports = {
     {
       name: process.env.BOT_NAME,
       script: "./src/index.js",
-      merge_logs: false,
       out_file: `${logFolder}out.log`,
       error_file: `${logFolder}err.log`,
       log_file: `${logFolder}all.log`
