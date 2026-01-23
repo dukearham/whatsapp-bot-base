@@ -1,13 +1,8 @@
-const now = new Date(),
-  localDate = now.toLocaleDateString("sv-SE", {
-    timeZone: "Asia/Jakarta"
-  }),
-  localTime = now.toLocaleTimeString("sv-SE", {
-    timeZone: "Asia/Jakarta"
-  });
-  
+import { getDateTime } from "./helper.js";
+
 export default {
   info: msg => {
-    console.log();
+    const { date, time } = getDateTime();
+    console.log(`[${date} ${time}] [INFO] ${msg}`);
   }
 };

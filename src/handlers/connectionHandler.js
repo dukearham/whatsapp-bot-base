@@ -7,7 +7,7 @@ export default sock => {
     const { connection, lastDisconnect } = update;
     if (connection === undefined) {
       if (config.usePairingCode) {
-        logger.info()
+        logger.info("Hai!");
       }
     }
   });
