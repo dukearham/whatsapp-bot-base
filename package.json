@@ -7,7 +7,8 @@
   "type": "module",
   "scripts": {
     "start": "pm2 start ecosystem.config.cjs && pm2 logs --raw",
-    "stop": "pm2 stop ecosystem.config.cjs"
+    "stop": "pm2 stop ecosystem.config.cjs",
+    "begin": "node src/botParent.js"
   },
   "dependencies": {
     "@whiskeysockets/baileys": "^7.0.0-rc.9",
